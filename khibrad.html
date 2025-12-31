@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khibrad Recruitment - Hano Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #F43F5E 0%, #EC4899 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
+        }
+        .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, #FDF2F8, #FCE7F3);
+            border-radius: 24px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+        }
+        
+        .about-content h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .about-content p { color: var(--gray); line-height: 1.8; margin-bottom: 1.5rem; }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-item {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+        
+        .service-item .icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, #F43F5E, #EC4899);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .service-item h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .service-item p { color: var(--gray); font-size: 0.95rem; }
+        
+        .contact-section {
+            background: var(--light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+        
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item .icon {
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, #F43F5E, #EC4899);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-item h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .contact-item p { color: var(--gray); font-size: 0.9rem; }
+        
+        .contact-form {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        .contact-form h3 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+        
+        .contact-form .form-group { margin-bottom: 1rem; }
+        .contact-form .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .contact-form .form-group input,
+        .contact-form .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .contact-form .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        @media (max-width: 968px) {
+            .about-section { grid-template-columns: 1fr; }
+            .services-list { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav scrolled" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">H</div>
+            <span class="nav-logo-text">Hano <span>Hub</span></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="career-accelerator.html">Career Accelerator</a></li>
+            <li><a href="baadi-goob.html">Baadi-Goob</a></li>
+        </ul>
+        <div class="nav-cta">
+            <button class="btn btn-outline" onclick="openModal('login')">Sign In</button>
+            <button class="btn btn-accent" onclick="location.href='dashboard.html'">Dashboard</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <span class="section-badge" style="background: rgba(255,255,255,0.2); color: white;">Khibrad Recruitment</span>
+        <h1>🤝 Professional Recruitment Agency</h1>
+        <p>Connecting talented professionals with leading employers worldwide.</p>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="about-section">
+                <div class="about-image">🤝</div>
+                <div class="about-content">
+                    <span class="section-badge" style="background: rgba(244, 63, 94, 0.1); color: #F43F5E;">About Us</span>
+                    <h2>Your Trusted Recruitment Partner</h2>
+                    <p>Khibrad Recruitment Agency is a professional recruitment service integrated with international recruitment software. We specialize in connecting talented candidates with employers across various industries.</p>
+                    <p>With years of experience and a global network, we provide comprehensive recruitment solutions for both job seekers and employers.</p>
+                    <button class="btn btn-accent btn-lg">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" style="background: rgba(244, 63, 94, 0.1); color: #F43F5E;">Our Services</span>
+                <h2>Comprehensive Recruitment Solutions</h2>
+                <p>We offer a range of services to meet your recruitment needs.</p>
+            </div>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="icon">🌍</div>
+                    <h3>Recruitment Services</h3>
+                    <p>Access global talent pools and opportunities across borders with our international recruitment network.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">🏢</div>
+                    <h3>Employer Services</h3>
+                    <p>Find the perfect candidates for your organization with our comprehensive screening and matching services.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">👤</div>
+                    <h3>Candidate Placement</h3>
+                    <p>We help job seekers find their ideal positions through personalized career matching and support.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">💼</div>
+                    <h3>Executive Search</h3>
+                    <p>Specialized recruitment for senior-level and executive positions across industries.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">📋</div>
+                    <h3>Career Consultation</h3>
+                    <p>Professional guidance and advice to help you navigate your career path successfully.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">📝</div>
+                    <h3>Resume Services</h3>
+                    <p>Expert resume writing and optimization to help you stand out to employers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" style="background: rgba(244, 63, 94, 0.1); color: #F43F5E;">Contact Us</span>
+                <h2>Get In Touch</h2>
+                <p>Ready to start your recruitment journey? Contact us today.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Business District, City Center</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@khibrad.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">🕐</div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form onsubmit="return false;">
+                        <div class="form-row">
+                            <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+                            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe"></div>
+                        </div>
+                        <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+                        <div class="form-group"><label>Subject</label><input type="text" placeholder="How can we help?"></div>
+                        <div class="form-group"><label>Message</label><textarea placeholder="Your message..."></textarea></div>
+                        <button class="btn btn-accent" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta" style="background: linear-gradient(135deg, #F43F5E, #EC4899);">
+        <div class="container">
+            <h2>Ready to Find Your Perfect Match?</h2>
+            <p>Whether you're hiring or job hunting, we're here to help.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-lg btn-white" onclick="openModal('register')">Get Started</button>
+                <button class="btn btn-lg btn-outline-white" onclick="location.href='index.html'">Back to Hub</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                © 2025 Hano Employment Hub - Khibrad Recruitment Agency
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal">
+            <div class="modal-header"><h3>Sign In</h3><button class="modal-close" onclick="closeModal('login')">×</button></div>
+            <div class="modal-body">
+                <form onsubmit="return false;">
+                    <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+                    <div class="form-group"><label>Password</label><input type="password" placeholder="••••••••"></div>
+                    <button class="btn btn-accent" onclick="location.href='dashboard.html'">Sign In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal">
+            <div class="modal-header"><h3>Create Account</h3><button class="modal-close" onclick="closeModal('register')">×</button></div>
+            <div class="modal-body">
+                <form onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+                        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe"></div>
+                    </div>
+                    <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+                    <div class="form-group"><label>Password</label><input type="password" placeholder="••••••••"></div>
+                    <button class="btn btn-accent" onclick="location.href='dashboard.html'">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
